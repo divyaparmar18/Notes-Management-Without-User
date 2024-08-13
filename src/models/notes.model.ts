@@ -1,4 +1,4 @@
-// entities/Note.ts
+import { IsString } from "class-validator";
 import {
   Entity,
   PrimaryGeneratedColumn,
@@ -13,9 +13,11 @@ export class Note {
   id: string;
 
   @Column()
+  @IsString()
   title: string;
 
   @Column()
+  @IsString()
   body: string;
 
   @Column({ default: false })

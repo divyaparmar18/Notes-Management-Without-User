@@ -1,0 +1,11 @@
+// tsconfig.test.json
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "module": "commonjs",
+    "target": "es6"
+  },
+  "include": ["src/**/*", "test/**/*"] // Ensure this includes your test directory
+}

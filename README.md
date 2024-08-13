@@ -19,3 +19,5 @@ To start the project, follow these steps:
 
 6. swagger documentation
    http://localhost:port/api-docs/
+
+7. To run test, use npm test

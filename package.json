@@ -4,7 +4,7 @@
   "description": "A notes management system without user",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watch",
     "dev": "npx tsc && ts-node-dev ./src/server.ts",
     "migration:generate-dev": "npx typeorm-ts-node-esm migration:generate ./src/migrations/user/ -d ./src/config/db.ts",
     "migration:run-dev": "npx typeorm-ts-node-esm migration:run -d ./src/config/db.ts"
@@ -26,7 +26,7 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "http-status-codes": "^2.3.0",
-    "jest-mock-extended": "^3.0.7",
+    "jest-environment-node": "^29.7.0",
     "pg": "^8.12.0",
     "reflect-metadata": "^0.2.2",
     "swagger-jsdoc": "^6.2.8",
@@ -36,6 +36,7 @@
     "winston": "^3.14.1"
   },
   "devDependencies": {
+    "@jest/globals": "^29.7.0",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/jest": "^29.5.12",
@@ -44,6 +45,7 @@
     "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.6",
     "jest": "^29.7.0",
+    "jest-mock-extended": "^3.0.7",
     "supertest": "^7.0.0",
     "ts-jest": "^29.2.4",
     "ts-node": "^10.9.2",
